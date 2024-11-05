@@ -1,4 +1,4 @@
-This survey complements my master's [thesis](https://github.com/PanosGriziotis/thesis-QA-subsystem) and is designed to evaluate responses to user queries across multiple aspects, including completeness, factual accuracy, and overall usefulness. Participants will rate each response using Likert-scale scores ranging from 1 to 5.
+This survey complements my master's [thesis](https://github.com/PanosGriziotis/QA-subsystem-thesis) and is designed to evaluate responses to user queries across multiple aspects, including completeness, factual accuracy, and overall usefulness. Participants will rate each response using Likert-scale scores ranging from 1 to 5.
 
 The survey application is built using the Flask framework and Survey.js library.
 
