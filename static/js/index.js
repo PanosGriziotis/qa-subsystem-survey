@@ -199,8 +199,8 @@ var t_idx = -1;
 
 // Load the test data and initialize the survey
 $.when(
-    $.getJSON('static/js/test_out_of_scope_threashold.json'),
-    $.getJSON('static/js/test_faq_threashold.json')
+    $.getJSON('static/js/test_out_of_scope.json'),
+    $.getJSON('static/js/test_faq.json')
 ).done(function(out_of_scope_data, general_faq_data) {
     // Extract the data from the responses
     out_of_scope_data = out_of_scope_data[0];
