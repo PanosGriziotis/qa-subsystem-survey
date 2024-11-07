@@ -42,7 +42,12 @@ def plot_box_plots(df, category):
                     elif answer == 'answer_3' and category == 'faq':
                         labels.append(system_labels[2])
 
-        box = axes[i].boxplot(data_to_plot, labels=labels, patch_artist=True)
+        box = axes[i].boxplot(
+            data_to_plot, 
+            labels=labels, 
+            patch_artist=True,
+            medianprops={'color': 'black', 'linewidth': 2}  # Make median line black and thicker
+        )
 
         for patch, color in zip(box['boxes'], colors):
             patch.set_facecolor(color)
@@ -50,11 +55,11 @@ def plot_box_plots(df, category):
         title = "Overall Usefulness" if aspect == "usefulness" else aspect.capitalize()
         axes[i].set_title(f'{title}', fontsize=28)  
         axes[i].set_ylabel('Ratings', fontsize=26, labelpad=20)
-        axes[i].tick_params(axis='y', labelsize=24)  # Larger y-axis tick labels
+        axes[i].tick_params(axis='y', labelsize=24)
         axes[i].tick_params(axis='x', labelsize=24)
 
         axes[i].set_ylim(0.5, 6.2)
-        axes[i].set_yticks([1, 2, 3, 4, 5])  
+        axes[i].set_yticks([1, 2, 3, 4, 5])
 
         if len(data_to_plot) >= 2:
             t_stat1, p_val1 = stats.ttest_ind(data_to_plot[0], data_to_plot[1])
